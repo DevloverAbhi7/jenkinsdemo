@@ -14,7 +14,7 @@ EXPOSE 8080
 ARG JAR_FILE=target/jenkinsdemo-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} jenkinsdemo-0.0.1-SNAPSHOT.jar
+ADD ${JAR_FILE} jenkinsdemo.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/jenkinsdemo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/jenkinsdemo.jar"]
